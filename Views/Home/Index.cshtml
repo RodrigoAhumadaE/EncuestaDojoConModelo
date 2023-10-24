@@ -2,7 +2,44 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="container">
+            <div class="card">
+                <form method="POST" asp-controller="Home" asp-action="Submission">
+                    <div class="item">
+                        <label for="Nombre">Tu Nombre: </label>
+                        <input type="text" name="Nombre" id="Nombre">
+                    </div>
+                    <div class="item">
+                        <label for="Locacion">Locación Dojo: </label>
+                        <select name="Locacion" id="Locacion">
+                            <option disabled selected>Elija una Locación</option>
+                            <option value="San Jose">San Jose</option>
+                            <option value="Oakland">Oakland</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Tulsa">Tulsa</option>
+                            <option value="Chicago">Chicago</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="Lenguaje">Lenguaje Favorito: </label>
+                        <select name="Lenguaje" id="Lenguaje">
+                            <option disabled selected>Elija un Lenguaje</option>
+                            <option value="C#">C#</option>
+                            <option value="Java">Java</option>
+                            <option value="C++">C++</option>
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                        </select>
+                    </div>
+                    <div class="item texto">
+                        <label for="Comentario">Comentario <em>(opcional):</em></label>
+                        <textarea name="Comentario" id="Comentario" rows="5"></textarea>
+                    </div>
+                    <div class="item boton">
+                        <button>Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
