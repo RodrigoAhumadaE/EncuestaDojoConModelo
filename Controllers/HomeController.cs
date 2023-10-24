@@ -17,11 +17,6 @@ public class HomeController : Controller{
         return View("Index");
     }
 
-    [HttpGet("result")]
-    public IActionResult Result(Survey survey){
-        return View("Result", survey);
-    }
-
     [HttpPost("survey")]
     public IActionResult Submission(Survey survey){
         Survey newSuvey = survey;
